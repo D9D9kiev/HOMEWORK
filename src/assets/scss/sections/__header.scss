@@ -1,0 +1,110 @@
+.header {
+  position: relative;
+  width: 100%;
+  max-width: 1170px;
+}
+
+.nav {
+  padding-right: 160px;
+  padding-left: 160px;
+  height: 120px;
+  margin: 0 auto;
+  @include displayFlex(space-between, center);
+  list-style: none;
+  @include fontStyle(11px, 400, 22px, $title-text-color, left, uppercase);
+  letter-spacing: 1.1px;
+  &__link {
+    transition: .3s;
+    &:hover {
+  color:  #57A4A4;
+    }
+  }
+}
+
+.down-nav {
+  width: 182px;
+  position: absolute;
+  right: 10px;
+  top: 60px;
+  list-style: none;
+  @include fontStyle(11px, 400, 22px, $title-text-color, left, uppercase);
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  background-color: #F5F5F5;
+  @include displayFlex(space-between, flex-start, column);
+  overflow: hidden;
+  display: none;
+
+  &__item {
+    width: 100%;
+    height: 32px;
+    padding-left: 10px;
+    padding-top: 5px;
+    &:hover {
+      color:  #57A4A4;
+      background-color: #E5E5E5;
+    }
+  }
+}
+
+.down-menu-btn {
+  margin-top: 23px;
+  margin-bottom: 23px;
+  width: 44px;
+  height: 37px;
+  background-color: #000;
+  margin-left: auto;
+  position: relative;
+  @include displayFlex(center, center, column);
+  display: none;
+  overflow: hidden;
+
+  &__line {
+    position: absolute;
+    width: 17px;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    transition: .4s;
+    &:nth-child(1) {
+      top: calc(50% - 5px);
+    }
+    &:nth-child(3) {
+      top: calc(50% + 5px);
+    }
+    &.top {
+      transform: rotate(45deg);
+      top: 18px;
+      left: 15px;
+    }
+    &.middle {
+      display: none;
+    }
+    &.bottom {
+      transform: rotate(-45deg);
+      top: 18px;
+      left: 15px;
+    }
+  }
+}
+
+@media(max-width: 1200px){
+  .nav {
+    padding-right: 60px;
+    padding-left: 60px;
+}}
+
+@media(max-width: 768px) {
+  .nav {
+    display: none;
+  }
+  .down-menu-btn {
+    display: flex;
+  }}
+
+  @media (max-width: 577px) {
+    .nav {
+      letter-spacing: 0px;
+    }}

@@ -1,0 +1,16 @@
+@mixin displayFlex($justify-content:center, $align-items:center, $direction:row) {
+  display:flex;
+  justify-content:$justify-content;
+  align-items:$align-items;
+  flex-direction: $direction;
+};
+
+@mixin fontStyle($font-size:14px, $font-weight:400, $line-height: 1, $font-color: #000, $text-align:inherit, $text-transform: none,$font-family:inherit) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $font-color;
+  text-align: $text-align;
+  font-family: $font-family;
+  text-transform: $text-transform;
+}

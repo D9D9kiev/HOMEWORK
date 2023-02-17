@@ -1,0 +1,60 @@
+.footer {
+    background-color: #000;
+    @include displayFlex(center, center, column);
+    padding: 70px 20px;
+    @include fontStyle(16px, 400, 28px, #B9B9B9);
+    &__title {
+      @include fontStyle(16px, 700, 22px, #FEFEFE);
+      text-transform: uppercase;
+      position: relative;
+      padding-bottom: 25px;
+      &:before {
+        content: "-";
+        position: absolute;
+        left: -10px;
+      }
+      &:after {
+        content: "-";
+        position: absolute;
+        right: -10px;
+      }
+    }
+    &__sub-text {
+      width: 44%;
+      text-align: center;
+      padding-bottom: 35px;
+    }
+    &__socials {
+      width: 194px;
+      @include displayFlex(space-between, center);
+      padding-bottom: 35px;
+    }
+    
+    &__contacts {
+      text-align: center;
+    }
+    &__company-address {
+      margin-right: 10px;
+    }
+    &__company-tel {
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+    &__company-email {
+      margin-left: 10px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer {
+      &__sub-text {
+        font-size: 13px;
+      }
+      &__sub-text-hidden {
+        display: none;
+      }
+    }
+    .footer__contacts {
+      width: 250px;
+    }
+  }

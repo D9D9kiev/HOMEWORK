@@ -1,0 +1,29 @@
+@import './reset';
+@import './variables';
+@import './mixins';
+@import './sections/sections.scss';
+
+*{
+  font-family: Roboto, sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  @include fontStyle(16px, 400, 1, #5C5C5C, left, none, 'Roboto' );
+  @include displayFlex(flex-start, center, column);
+  max-width: 100%;
+  padding-right: 92px;
+  padding-left: 92px;
+  margin: 0 auto;
+  .main {
+    width: 100%;
+    @include displayFlex(flex-start, center, column);
+  }
+}
+
+
+
+

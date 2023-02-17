@@ -1,0 +1,18 @@
+.poster {
+    width: 100%;
+    max-width: 1170px;
+    padding-top: 34px;
+    &-wrapper {
+      img {
+        width: 100%;
+      }
+    }
+  }
+  
+  
+  @media (max-width: 768px) {
+    .poster {
+      padding: 23px 28px 0 25px;
+    }
+  }
+  
